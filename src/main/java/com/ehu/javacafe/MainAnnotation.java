@@ -1,5 +1,6 @@
 package com.ehu.javacafe;
 
+import com.ehu.javacafe.configuration.ComponentScanConfiguration;
 import com.ehu.javacafe.configuration.DatabaseConfiguration;
 import com.ehu.javacafe.configuration.JdbcInfrastructureConfig;
 import com.ehu.javacafe.configuration.RepositoryConfiguration;
@@ -16,7 +17,8 @@ public class MainAnnotation {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(
                 DatabaseConfiguration.class,
                 JdbcInfrastructureConfig.class,
-                RepositoryConfiguration.class);
+                RepositoryConfiguration.class,
+                ComponentScanConfiguration.class);
 
         System.out.println("\n--- 1. Prototype BeverageSelector ---");
         List<Beverage> order = ctx.getBean(BeverageSelectorRandom.class).selectBeverage();

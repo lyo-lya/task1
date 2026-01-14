@@ -1,127 +1,23 @@
-2026-01-09 22:01:51.186 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 22:01:51.211 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 1 JDBC repository interface.
-2026-01-09 22:01:51.283 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'DBBeverageRepository' defined in file [/Users/volha.platnitskaya/Downloads/task/target/classes/com/ehu/javacafe/repository/impl/DBBeverageRepository.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'beverageCrudRepository' defined in com.ehu.javacafe.repository.BeverageCrudRepository defined in @EnableJdbcRepositories declared on DatabaseConfiguration: Cannot resolve reference to bean 'org.springframework.data.jdbc.core.mapping.JdbcMappingContext' while setting bean property 'mappingContext'
-2026-01-09 22:10:10.880 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 22:10:10.900 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 1 JDBC repository interface.
-2026-01-09 22:10:10.968 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'DBBeverageRepository' defined in file [/Users/volha.platnitskaya/Downloads/task/target/classes/com/ehu/javacafe/repository/impl/DBBeverageRepository.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'beverageCrudRepository' defined in com.ehu.javacafe.repository.BeverageCrudRepository defined in @EnableJdbcRepositories declared on DatabaseConfiguration: Cannot resolve reference to bean 'org.springframework.data.jdbc.core.mapping.JdbcMappingContext' while setting bean property 'mappingContext'
-2026-01-09 22:28:06.098 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 22:28:06.130 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 1 JDBC repository interface.
-2026-01-09 22:28:06.131 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 22:28:06.133 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 1 JDBC repository interface.
-2026-01-09 22:28:06.173 [main] INFO  c.e.j.c.DatabaseConfiguration - Configuring H2 embedded database
-2026-01-09 22:28:06.176 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2026-01-09 22:28:06.235 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
-2026-01-09 22:28:06.237 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in com.ehu.javacafe.configuration.DatabaseConfiguration: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception with message: Failed to execute SQL script statement #3 of class path resource [schema.sql]: INSERT INTO BEVERAGE (name, price, description) VALUES ('Americano', 2.80, 'Espresso diluted with hot water for a smooth taste'), ('Flat White', 3.75, 'Velvety microfoam with rich espresso'), ('Macchiato', 3.20, 'Espresso marked with a dollop of foam'), ('Cortado', 3.40, 'Equal parts espresso and steamed milk'), ('Irish Coffee', 5.50, 'Coffee with whiskey and whipped cream'), ('Affogato', 4.25, 'Espresso poured over vanilla ice cream'), ('Cold Brew', 3.80, 'Slow-steeped coffee served cold'), ('Nitro Coffee', 4.50, 'Cold brew infused with nitrogen for a creamy texture'), ('Iced Latte', 4.00, 'Espresso with cold milk and ice'),
-2026-01-09 22:32:02.853 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 22:32:02.877 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 1 JDBC repository interface.
-2026-01-09 22:32:02.877 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 22:32:02.879 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 1 JDBC repository interface.
-2026-01-09 22:32:02.909 [main] INFO  c.e.j.c.DatabaseConfiguration - Configuring H2 embedded database
-2026-01-09 22:32:02.911 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2026-01-09 22:32:02.976 [main] INFO  c.e.j.c.DatabaseConfiguration - H2 database configured successfully
-2026-01-09 22:32:02.987 [main] INFO  c.e.j.c.DatabaseConfiguration - Creating JdbcTemplate bean
-2026-01-09 22:32:02.998 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'beverageCrudRepository' defined in com.ehu.javacafe.repository.BeverageCrudRepository defined in @EnableJdbcRepositories declared on RepositoryConfiguration: Failed to convert property value of type 'org.springframework.jdbc.core.JdbcTemplate' to required type 'org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations' for property 'jdbcOperations'; Cannot convert value of type 'org.springframework.jdbc.core.JdbcTemplate' to required type 'org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations' for property 'jdbcOperations': no matching editors or conversion strategy found
-2026-01-09 22:32:02.999 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
-2026-01-09 22:34:25.113 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 22:34:25.139 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 1 JDBC repository interface.
-2026-01-09 22:34:25.139 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 22:34:25.141 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 1 JDBC repository interface.
-2026-01-09 22:34:25.172 [main] INFO  c.e.j.c.DatabaseConfiguration - Configuring H2 embedded database
-2026-01-09 22:34:25.174 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2026-01-09 22:34:25.237 [main] INFO  c.e.j.c.DatabaseConfiguration - H2 database configured successfully
-2026-01-09 22:34:25.255 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'beverageCrudRepository' defined in com.ehu.javacafe.repository.BeverageCrudRepository defined in @EnableJdbcRepositories declared on RepositoryConfiguration: Cannot resolve reference to bean 'jdbcTemplate' while setting bean property 'jdbcOperations'
-2026-01-09 22:34:25.256 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
-2026-01-09 22:35:40.466 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 22:35:40.491 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 1 JDBC repository interface.
-2026-01-09 22:35:40.492 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 22:35:40.494 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 1 JDBC repository interface.
-2026-01-09 22:35:40.526 [main] INFO  c.e.j.c.DatabaseConfiguration - Configuring H2 embedded database
-2026-01-09 22:35:40.528 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2026-01-09 22:35:40.594 [main] INFO  c.e.j.c.DatabaseConfiguration - H2 database configured successfully
-2026-01-09 22:35:40.603 [main] INFO  c.e.j.c.DatabaseConfiguration - Creating JdbcTemplate bean
-2026-01-09 22:35:40.613 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'beverageCrudRepository' defined in com.ehu.javacafe.repository.BeverageCrudRepository defined in @EnableJdbcRepositories declared on RepositoryConfiguration: Failed to convert property value of type 'org.springframework.jdbc.core.JdbcTemplate' to required type 'org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations' for property 'jdbcOperations'; Cannot convert value of type 'org.springframework.jdbc.core.JdbcTemplate' to required type 'org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations' for property 'jdbcOperations': no matching editors or conversion strategy found
-2026-01-09 22:35:40.614 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
-2026-01-09 22:40:29.898 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 22:40:29.932 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 1 JDBC repository interface.
-2026-01-09 22:40:29.934 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 22:40:29.938 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 1 JDBC repository interface.
-2026-01-09 22:40:29.991 [main] INFO  c.e.j.c.DatabaseConfiguration - Configuring H2 embedded database
-2026-01-09 22:40:29.994 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2026-01-09 22:40:30.075 [main] INFO  c.e.j.c.DatabaseConfiguration - H2 database configured successfully
-2026-01-09 22:40:30.086 [main] INFO  c.e.j.c.DatabaseConfiguration - Creating JdbcTemplate bean
-2026-01-09 22:40:30.097 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'beverageCrudRepository' defined in com.ehu.javacafe.repository.BeverageCrudRepository defined in @EnableJdbcRepositories declared on RepositoryConfiguration: Cannot resolve reference to bean 'org.springframework.data.jdbc.core.mapping.JdbcMappingContext' while setting bean property 'mappingContext'
-2026-01-09 22:40:30.097 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
-2026-01-09 23:00:27.342 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 23:00:27.368 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 1 JDBC repository interface.
-2026-01-09 23:00:27.368 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 23:00:27.370 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 1 JDBC repository interface.
-2026-01-09 23:00:27.403 [main] INFO  c.e.j.c.DatabaseConfiguration - Configuring H2 embedded database
-2026-01-09 23:00:27.405 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2026-01-09 23:00:27.472 [main] INFO  c.e.j.c.DatabaseConfiguration - H2 database configured successfully
-2026-01-09 23:00:27.482 [main] INFO  c.e.j.c.DatabaseConfiguration - Creating JdbcTemplate bean
-2026-01-09 23:00:27.492 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'beverageCrudRepository' defined in com.ehu.javacafe.repository.BeverageCrudRepository defined in @EnableJdbcRepositories declared on RepositoryConfiguration: Cannot resolve reference to bean 'jdbcAggregateTemplate' while setting bean property 'jdbcOperations'
-2026-01-09 23:00:27.493 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
-2026-01-09 23:04:09.368 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 23:04:09.399 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 1 JDBC repository interface.
-2026-01-09 23:04:09.402 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 23:04:09.406 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 1 JDBC repository interface.
-2026-01-09 23:04:09.466 [main] INFO  c.e.j.c.DatabaseConfiguration - Configuring H2 embedded database
-2026-01-09 23:04:09.468 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2026-01-09 23:04:09.522 [main] INFO  c.e.j.c.DatabaseConfiguration - H2 database configured successfully
-2026-01-09 23:04:09.530 [main] INFO  c.e.j.c.DatabaseConfiguration - Creating JdbcTemplate bean
-2026-01-09 23:04:09.587 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'beverageCrudRepository' defined in com.ehu.javacafe.repository.BeverageCrudRepository defined in @EnableJdbcRepositories declared on RepositoryConfiguration: Failed to convert property value of type 'org.springframework.data.jdbc.core.JdbcAggregateTemplate' to required type 'org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations' for property 'jdbcOperations'; Cannot convert value of type 'org.springframework.data.jdbc.core.JdbcAggregateTemplate' to required type 'org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations' for property 'jdbcOperations': no matching editors or conversion strategy found
-2026-01-09 23:04:09.588 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
-2026-01-09 23:07:03.386 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 23:07:03.408 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 1 JDBC repository interface.
-2026-01-09 23:07:03.409 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 23:07:03.412 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 1 JDBC repository interface.
-2026-01-09 23:07:03.452 [main] INFO  c.e.j.c.DatabaseConfiguration - Configuring H2 embedded database
-2026-01-09 23:07:03.454 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2026-01-09 23:07:03.518 [main] INFO  c.e.j.c.DatabaseConfiguration - H2 database configured successfully
-2026-01-09 23:07:03.527 [main] INFO  c.e.j.c.DatabaseConfiguration - Creating JdbcTemplate bean
-2026-01-09 23:11:37.643 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 23:11:37.661 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 1 JDBC repository interface.
-2026-01-09 23:11:37.661 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 23:11:37.663 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 1 JDBC repository interface.
-2026-01-09 23:11:37.726 [main] INFO  c.e.j.c.DatabaseConfiguration - Configuring H2 embedded database
-2026-01-09 23:11:37.728 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2026-01-09 23:11:37.782 [main] INFO  c.e.j.c.DatabaseConfiguration - H2 database configured successfully
-2026-01-09 23:11:37.855 [main] INFO  c.e.j.r.impl.DBBeverageRepository - DBBeverageRepository initialized with Spring Data JDBC
-2026-01-09 23:11:37.917 [main] INFO  c.e.j.r.impl.JSONBeverageRepository - Successfully loaded 4 beverages from JSON file
-2026-01-09 23:11:37.918 [main] INFO  c.e.j.r.impl.JSONBeverageRepository - JSONBeverageRepository initialized with 4 beverages
-2026-01-09 23:11:37.919 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'beverageDiscountService' defined in file [/Users/volha.platnitskaya/Downloads/task/target/classes/com/ehu/javacafe/service/BeverageDiscountService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.ehu.javacafe.repository.BeverageRepository' available: expected single matching bean but found 2: DBBeverageRepository,JSONBeverageRepository
-2026-01-09 23:11:37.919 [main] INFO  c.e.j.r.impl.JSONBeverageRepository - JSONBeverageRepository destroyed
-2026-01-09 23:11:37.919 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
-2026-01-09 23:12:03.942 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 23:12:03.965 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 1 JDBC repository interface.
-2026-01-09 23:12:03.966 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 23:12:03.968 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 1 JDBC repository interface.
-2026-01-09 23:12:04.015 [main] INFO  c.e.j.c.DatabaseConfiguration - Configuring H2 embedded database
-2026-01-09 23:12:04.018 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2026-01-09 23:12:04.073 [main] INFO  c.e.j.c.DatabaseConfiguration - H2 database configured successfully
-2026-01-09 23:12:04.081 [main] INFO  c.e.j.c.DatabaseConfiguration - Creating JdbcTemplate bean
-2026-01-09 23:18:37.566 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 23:18:37.594 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 1 JDBC repository interface.
-2026-01-09 23:18:37.596 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 23:18:37.599 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 1 JDBC repository interface.
-2026-01-09 23:18:37.643 [main] INFO  c.e.j.c.DatabaseConfiguration - Configuring H2 embedded database
-2026-01-09 23:18:37.645 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2026-01-09 23:18:37.699 [main] INFO  c.e.j.c.DatabaseConfiguration - H2 database configured successfully
-2026-01-09 23:18:37.708 [main] INFO  c.e.j.c.DatabaseConfiguration - Creating JdbcTemplate bean
-2026-01-09 23:21:42.243 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 23:21:42.267 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 1 JDBC repository interface.
-2026-01-09 23:21:42.268 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 23:21:42.270 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 1 JDBC repository interface.
-2026-01-09 23:21:42.310 [main] INFO  c.e.j.c.DatabaseConfiguration - Configuring H2 embedded database
-2026-01-09 23:21:42.312 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2026-01-09 23:21:42.378 [main] INFO  c.e.j.c.DatabaseConfiguration - H2 database configured successfully
-2026-01-09 23:21:42.387 [main] INFO  c.e.j.c.DatabaseConfiguration - Creating JdbcTemplate bean
-2026-01-09 23:22:11.459 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 23:22:11.484 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 1 JDBC repository interface.
-2026-01-09 23:22:11.485 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2026-01-09 23:22:11.488 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 1 JDBC repository interface.
-2026-01-09 23:22:11.531 [main] INFO  c.e.j.c.DatabaseConfiguration - Configuring H2 embedded database
-2026-01-09 23:22:11.534 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2026-01-09 23:22:11.587 [main] INFO  c.e.j.c.DatabaseConfiguration - H2 database configured successfully
-2026-01-09 23:22:11.596 [main] INFO  c.e.j.c.DatabaseConfiguration - Creating JdbcTemplate bean
-2026-01-09 23:22:11.681 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+2026-01-14 22:29:14.236 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2026-01-14 22:29:14.265 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 1 JDBC repository interface.
+2026-01-14 22:29:14.266 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2026-01-14 22:29:14.268 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 1 JDBC repository interface.
+2026-01-14 22:29:14.369 [main] INFO  c.e.j.r.impl.JSONBeverageRepository - Successfully loaded 4 beverages from JSON file
+2026-01-14 22:29:14.369 [main] INFO  c.e.j.r.impl.JSONBeverageRepository - JSONBeverageRepository initialized with 4 beverages
+2026-01-14 22:29:14.378 [main] INFO  c.e.j.c.DatabaseConfiguration - Configuring H2 embedded database
+2026-01-14 22:29:14.381 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2026-01-14 22:29:14.442 [main] INFO  c.e.j.c.DatabaseConfiguration - H2 database configured successfully
+2026-01-14 22:29:14.444 [main] INFO  c.e.j.c.DatabaseConfiguration - Creating JdbcTemplate bean
+2026-01-14 22:29:14.533 [main] DEBUG c.e.j.r.impl.JSONBeverageRepository - Fetching beverage by ID: 2
+2026-01-14 22:29:14.534 [main] DEBUG c.e.j.r.impl.JSONBeverageRepository - Fetching beverage by ID: 3
+2026-01-14 22:29:14.534 [main] DEBUG c.e.j.r.impl.JSONBeverageRepository - Fetching beverage by ID: 1
+2026-01-14 22:29:14.534 [main] INFO  c.e.j.r.impl.JSONBeverageRepository - Fetching all beverages from JSON repository
+2026-01-14 22:29:14.534 [main] DEBUG c.e.j.r.impl.JSONBeverageRepository - Total beverages available: 4
+2026-01-14 22:29:18.543 [main] INFO  c.e.j.service.CoffeeMachineService - CoffeeMachineService CONSTRUCTOR called
+2026-01-14 22:29:18.544 [main] INFO  c.e.j.service.CoffeeMachineService - CoffeeMachineService started brewing
+2026-01-14 22:29:18.544 [main] DEBUG c.e.j.r.impl.JSONBeverageRepository - Fetching beverage by ID: 2
+2026-01-14 22:29:18.545 [main] DEBUG c.e.j.r.impl.JSONBeverageRepository - Fetching beverage by ID: 1
+2026-01-14 22:29:18.545 [main] DEBUG c.e.j.r.impl.JSONBeverageRepository - Fetching beverage by ID: 2
+2026-01-14 22:29:18.545 [main] INFO  c.e.j.service.CoffeeMachineService - Coffee is ready
+2026-01-14 22:29:18.547 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Shutting down embedded database: url='jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+2026-01-14 22:29:18.550 [main] INFO  c.e.j.r.impl.JSONBeverageRepository - JSONBeverageRepository destroyed

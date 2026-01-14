@@ -4,6 +4,7 @@ import com.ehu.javacafe.entity.Beverage;
 import com.ehu.javacafe.repository.BeverageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;

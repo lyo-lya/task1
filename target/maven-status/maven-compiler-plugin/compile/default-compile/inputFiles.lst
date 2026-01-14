@@ -1,0 +1,15 @@
+/Users/volha.platnitskaya/Downloads/task/src/main/java/com/ehu/javacafe/MainAnnotation.java
+/Users/volha.platnitskaya/Downloads/task/src/main/java/com/ehu/javacafe/configuration/DatabaseConfiguration.java
+/Users/volha.platnitskaya/Downloads/task/src/main/java/com/ehu/javacafe/configuration/JdbcInfrastructureConfig.java
+/Users/volha.platnitskaya/Downloads/task/src/main/java/com/ehu/javacafe/configuration/RepositoryConfiguration.java
+/Users/volha.platnitskaya/Downloads/task/src/main/java/com/ehu/javacafe/entity/Beverage.java
+/Users/volha.platnitskaya/Downloads/task/src/main/java/com/ehu/javacafe/repository/BeverageCrudRepository.java
+/Users/volha.platnitskaya/Downloads/task/src/main/java/com/ehu/javacafe/repository/BeverageRepository.java
+/Users/volha.platnitskaya/Downloads/task/src/main/java/com/ehu/javacafe/repository/impl/DBBeverageRepository.java
+/Users/volha.platnitskaya/Downloads/task/src/main/java/com/ehu/javacafe/repository/impl/JSONBeverageRepository.java
+/Users/volha.platnitskaya/Downloads/task/src/main/java/com/ehu/javacafe/repository/impl/Logger.java
+/Users/volha.platnitskaya/Downloads/task/src/main/java/com/ehu/javacafe/service/BeverageDiscountService.java
+/Users/volha.platnitskaya/Downloads/task/src/main/java/com/ehu/javacafe/service/BeverageSelector.java
+/Users/volha.platnitskaya/Downloads/task/src/main/java/com/ehu/javacafe/service/BeverageSelectorRandom.java
+/Users/volha.platnitskaya/Downloads/task/src/main/java/com/ehu/javacafe/service/CoffeeMachineService.java
+/Users/volha.platnitskaya/Downloads/task/src/main/java/com/ehu/javacafe/service/CoffeeService.java
